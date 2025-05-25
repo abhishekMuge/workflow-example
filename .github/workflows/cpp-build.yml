@@ -19,5 +19,11 @@ jobs:
       - name: Build hello.cpp
         run: g++ hello.cpp -o hello
 
-      - name: Run hello
-        run: ./hello
+      - name: Create build directory
+        run: mkdir -p build
+
+      - name: Copy executable to build directory
+        run: cp hello build/
+
+      - name: List build directory contents
+        run: ls -l build
