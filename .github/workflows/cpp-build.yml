@@ -27,3 +27,9 @@ jobs:
 
       - name: List build directory contents
         run: ls -l build
+
+      - name: Upload build directory as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifact
+          path: build/
